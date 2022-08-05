@@ -105,13 +105,32 @@ img {
 
 .content {
   grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.col-wide {
+  grid-column: 1 / -1;
+}
+
+.img-1 {
+  grid-row: span 2;
+  align-self: end;
+}
+
+.img-2 {
+  align-self: end;
 }
 
 /* ADVERTS */
 
 .adverts {
-  display: grid;
   grid-area: adverts;
+  display: grid;
   background: #fafbfc;
   align-content: start;
   padding: 30px;
@@ -123,7 +142,6 @@ img {
 .footer {
   grid-area: footer;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
-
 }
 
 .footer p {
