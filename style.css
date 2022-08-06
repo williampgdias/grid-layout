@@ -24,7 +24,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -104,7 +104,7 @@ img {
     grid-template-columns: auto;
   }
   .header nav a {
-    font-size: 1rem;
+    /* font-size: 1rem; */
   }
   .header li + li {
     margin-left: 10px;
@@ -160,7 +160,7 @@ img {
     top: 5px;
     right: 30px;
     color: rgba(0, 0, 0, 0.3);
-    animation: arrow .5s ease-in 0s infinite alternate;
+    animation: arrow 0.5s ease-in 0s infinite alternate;
   }
   .sidenav ul {
     display: flex;
@@ -195,16 +195,16 @@ img {
 .img-1 {
   grid-row: span 2;
   align-self: end;
-  width: 100%;
 }
 
 .img-2 {
   align-self: end;
-  width: 100%;
 }
 
-.img-3 {
-  width: 100%;
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
 }
 
 /* CONTENT STYLES */
@@ -310,6 +310,13 @@ p {
   border-top: 2px solid #b07dfb;
 }
 
+@media (max-width: 600px) {
+  .emphasis {
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+}
+
 /* ADVERTS */
 
 .adverts {
@@ -319,6 +326,7 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* FOOTER */
